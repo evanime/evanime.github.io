@@ -6,8 +6,8 @@ body {
 	font-family: 'Comfortaa', cursive;
 	color: #fff;
 	font-size: 16px;
-  /*background: linear-gradient(to top, #060606, #121212);*/
-	background-color: #141414;
+  background: linear-gradient(to top, #060606, #252525);
+	/*background-color: #141414;*/
 }
 
  A IMG { border: none; }
@@ -15,8 +15,9 @@ body {
 * {
     box-sizing: border-box;
 }
+/* Страница Релиза */
 .column {
-
+    color: #000;
     float: left;
     padding: 10px;
 }
@@ -34,21 +35,38 @@ body {
     content: "";
     display: table;
     clear: both;
-      margin: 0 auto; 
+    margin: 0 auto; 
 }
 
 .row {
   margin: 0 auto;
   max-width: 1280px;
+  background-color: #FFF;
+}
+
+/* Видео релиза */
+.column-video {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
   background-color: #248675;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  z-index:1;
 }
 
 @media screen and (max-width: 600px) {
     .column.side, .column.middle {
         width: 100%;
+        padding: 0;
     }
 }
-
+@media screen and (max-width: 1170px) {
+    .column.side {
+        display: none;
+    }
+}
 
 /*ШААПКА*/
 .shapka {
@@ -142,19 +160,31 @@ body {
   }
 }
 
-
-/*
-.card {
-  margin: 30px auto;
-  width: 100px;
-  height: 300px;
-  border-radius: 40px;
-  background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-  transition: 0.4s;
+/* Подвал */
+.fa {
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
 }
-*/
+
+.fa:hover {
+    -webkit-filter: saturate(200%);
+}
+
+/* VK */
+.fa-vk {
+    background: #db2e52;
+    color: white;
+}
+
+/* Telegram */
+.fa-telegram {
+    background: #db2e52;
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 25px;
+    padding: 10px;
+}
