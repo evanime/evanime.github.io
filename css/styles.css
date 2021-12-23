@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: 'Comfortaa', cursive;
+	color: #fff;
+	font-size: 16px;
+  /*background: linear-gradient(to top, #060606, #121212);*/
+	background-color: #141414;
+}
+
+ A IMG { border: none; }
+/* НАЧАЛО */
+* {
+    box-sizing: border-box;
+}
+.column {
+
+    float: left;
+    padding: 10px;
+}
+
+/* Обложка на странице релиза */
+.column.side {
+    width: 20%;
+}
+
+/* Описание на странице релиза */
+.column.middle {
+    width: 80%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+      margin: 0 auto; 
+}
+
+.row {
+  margin: 0 auto;
+  max-width: 1280px;
+  background-color: #248675;
+}
+
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+
+
+/*ШААПКА*/
+.shapka {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  z-index:1;
+}
+
+@media all and (max-width: 1280px) {
+  .shapka {
+    width: 100%;
+  }
+}
+
+/* Лого */
+.logo {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+@media all and (max-width: 1280px) {
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* релизы */
+
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+
+.card {
+  margin: 25px auto;
+  width: 280px;
+  height: 400px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.title-overlay {
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -10px;
+  height: 40px;
+  color: white;
+  transition: .5s ease;
+  opacity:0;
+}
+
+.card:hover .title-overlay {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: scale(0.95, 0.95);
+  -webkit-filter: saturate(175%);
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+
+/*
+.card {
+  margin: 30px auto;
+  width: 100px;
+  height: 300px;
+  border-radius: 40px;
+  background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  transition: 0.4s;
+}
+*/
