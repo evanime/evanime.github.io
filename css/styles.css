@@ -1,190 +1,328 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 body {
-	padding: 0;
-	margin: 0 auto;
-	font-family: 'Comfortaa', cursive;
-	color: #fff;
-	font-size: 16px;
-  background: linear-gradient(to top, #060606, #252525);
-	/*background-color: #141414;*/
-}
-
- A IMG { border: none; }
-/* НАЧАЛО */
-* {
+    padding: 0;
+    margin: 0;
+    background-color: #121212  !important;
     box-sizing: border-box;
 }
-/* Страница Релиза */
-.column {
-    color: #000;
-    float: left;
-    padding: 10px;
+
+.main {
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-/* Обложка на странице релиза */
-.column.side {
-    width: 20%;
+.releases {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* Описание на странице релиза */
-.column.middle {
-    width: 80%;
-}
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-    margin: 0 auto; 
+.release {
+    width: 250px;
+
+    margin: 10px;
+    /*background-color: #123518;*/
 }
 
-.row {
-  margin: 0 auto;
-  max-width: 1280px;
-  background-color: #FFF;
+.release img {
+    width: 250px;
+    height: 350px;
+    transition: .5s ease;
 }
 
-/* Видео релиза */
-.column-video {
-  margin: 0 auto;
-  max-width: 1280px;
-  width: 100%;
-  background-color: #248675;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  z-index:1;
+@media screen and (max-width: 768px) {
+.release {
+    width: 150px;
+}
+.release img {
+    width: 150px;
+    height: 210px;
+}
+}
+
+.release:hover img {
+    /*transform: scale(0.99, 0.99);*/
+    -webkit-filter: saturate(175%);
+}
+
+.release-info { 
+    text-align: center;
+    /*background-color: #875618;*/
+}
+
+.release-title {
+    font-size: 20px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.release-category {
+    font-size: 15px;
+    color: #ffc4d0;
+    font-family: 'Montserrat', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Шапка//////////////////////////////////////////// */
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #060606;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+    font-size:15px;
+    width: 150px;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    transition: .3s ease;
+}
+.header img {
+    max-height:40px;
+}
+
+.header a:hover {
+    background-color: #db2e52;
+    color: white;
+}
+.logo {
+    background-color: #db2e52;
+    order: 2;
+}
+.team {
+    order: 1;
+}
+.donats {
+    order: 3;
+}
+.burger {
+    order: 4;
+    display: none;
 }
 
 @media screen and (max-width: 600px) {
-    .column.side, .column.middle {
-        width: 100%;
-        padding: 0;
-    }
-}
-@media screen and (max-width: 1170px) {
-    .column.side {
-        display: none;
-    }
-}
-
-/*ШААПКА*/
-.shapka {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  z-index:1;
-}
-
-@media all and (max-width: 1280px) {
-  .shapka {
-    width: 100%;
-  }
-}
-
-/* Лого */
-.logo {
-  margin: 0 auto;
-  width: 150px;
-  height: 150px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-@media all and (max-width: 1280px) {
-  .logo {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-/* релизы */
-
-.cards-list {
-  z-index: 0;
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  text-decoration: none;
-}
-
-.card {
-  margin: 25px auto;
-  width: 280px;
-  height: 400px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.card .card_image {
-  width: inherit;
-  height: inherit;
-}
-
-.card .card_image img {
-  width: inherit;
-  height: inherit;
-  object-fit: cover;
-}
-
-.title-overlay {
-  text-align: center;
-  font-family: 'Comfortaa', cursive;
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: -10px;
-  height: 40px;
-  color: white;
-  transition: .5s ease;
-  opacity:0;
-}
-
-.card:hover .title-overlay {
-  opacity: 1;
-}
-
-.card:hover {
-  transform: scale(0.95, 0.95);
-  -webkit-filter: saturate(175%);
-}
-
-@media all and (max-width: 500px) {
-  .card-list {
-    /* On small screens, we are no longer using row direction but column */
+.header {
     flex-direction: column;
-  }
 }
 
-/* Подвал */
+.nav-bar {
+    display: none;
+}
+.active {
+    background-color: #060606;
+}
+.header a:hover {
+    background-color: #060606;
+}
+.logo {
+    display: none;
+    order: 2;
+}
+.burger {
+    display: block;
+    order: 1;
+}
+.team {
+    display: none;
+    order: 3;
+}
+.donats {
+    display: none;
+    order: 4;
+}
+/* Мобильное меню */
+.header.responsive .logo {
+    display: block;
+    order: 2;
+}
+.header.responsive .burger {
+    order: 1;
+}
+.header.responsive .team {
+    display: block;
+    order: 3;
+}
+.header.responsive .donats {
+    display: block;
+    order: 4;
+}
+}
+
+
+/* Podval */
+.footer {
+    background-color: #121212;
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
 .fa {
     padding: 15px;
     text-align: center;
     text-decoration: none;
+    /*width: 100%;*/
 }
 
 .fa:hover {
     -webkit-filter: saturate(200%);
+    color: white;
 }
-
 /* VK */
 .fa-vk {
-    background: #db2e52;
+/*    background: linear-gradient(skyblue, aliceblue);*/
     color: white;
 }
 
 /* Telegram */
 .fa-telegram {
-    background: #db2e52;
+    /*background: #db2e52;*/
     color: white;
 }
 
-.footer {
-    text-align: center;
-    margin-top: 25px;
-    padding: 10px;
+
+
+
+
+
+
+
+
+
+
+
+/* Страница аниме: релиз */
+
+
+.anime-shapka {
+    margin: 0 auto;
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #843697;
 }
+.anime-shapka img {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+}
+
+/*@media all and (max-width: 1280px) {
+  .anime-header {
+    width: 100%;
+  }
+}*/
+
+.anime-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+
+}
+.anime-page-left {
+    /*background-color: blue;*/
+    width: 250px;
+    margin-right: 35px;
+}
+
+@media screen and (max-width: 600px) {
+.anime-page-left {
+    display: none;
+}
+}
+
+.anime-poster {
+    margin-top: -75px;
+    width: 250px;
+    height: 350px;
+    box-shadow: 0px -4px 25px 0px rgba(0, 0, 0, 0.28);
+    /*margin: 0px 5px 5px 10px;*/
+}
+.anime-poster img {
+    width: inherit;
+    height: inherit;
+}
+.anime-download {
+    color: #db2e52;
+    text-align: center;
+}
+
+
+.anime-page-right {
+    /*background-color: orange;*/
+    padding: 0 10px;
+
+}
+.anime-info {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: white;
+    padding-top: 10px;
+}
+
+.anime-info p {
+    margin-top: -10px;
+}
+
+.anime-player {
+    margin: 0 auto;
+    max-width: 1920px;
+    position: relative;
+    padding-bottom: 35.5%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.anime-player iframe {
+ position: absolute;
+ top:0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+}
+
+.anime-timing-and-actor {
+    text-align: right;
+    color: white;
+}
+.anime-timing-and-actor img {
+    width: 225px;
+}
+
+
+
+
+
+.kit {
+margin: 0 auto;
+max-width: 1280px;
+text-align: center;
+color: white;
+font-size: 25px;
+}
+
+.kit img {
+width: 150px;
+}
+
+
