@@ -1,89 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EVA - Epic Voice Anime</title>
-<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>EVA - Epic Voice Anime</title>
 </head>
 <body>
-<header>
-<div><img src="img/logo.png" alt="EVA" class="logo"></div>
-</header>
+<!-- Шапка-ушанка --> 
+<div class="header" id="kisik-nav">
+    <div class="logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a></div>
+    <div class="team"><a href="team.html">Команда</a></div>
+    <div class="donats"><a href="donats.html">Поддержка</a></div>
+    <div class="burger"><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></div>
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("kisik-nav");
+    if (x.className === "header") {
+        x.className += " responsive";
+    } else {
+        x.className = "header";
+    }
+}
+</script>
 
 <!-- Релизы -->
-<div class="cards-list">
 
-<!-- Релиз 1 -->
-<a href="releases/doki.html">  
-<div class="card 1">
-<div class="card_image">
-<img src="https://nyaa.shikimori.org/system/animes/original/49605.jpg?1638102285" /></div>
-<div class="title-overlay">
-<p>Доки, ты справишься!</p>
+<!-- <header class="conteiner">
+<div class="header-content">
+<a href="index.html"><img src="img/logo.png" alt="LOGO"></a>
+<form>
+<input type="text" class="header-search" placeholder="Поиск">
+</form>
 </div>
-</div>
-</a>
+</header> -->
 
-<!-- Релиз 2 -->
-<a href="releases/doki.html"> 
-<div class="card 2">
-<div class="card_image">
-<img src="https://nyaa.shikimori.one/system/animes/original/44055.jpg?1636554619" />
-</div>
-<div class="title-overlay">
-<p>Сасаки и Мияно</p>
-</div>
-</div>
-</a>
+<div class="main">
+<div class="releases">
 
-<!-- Релиз 3 -->
-<a href="releases/doki.html"> 
-<div class="card 3">
-<div class="card_image">
-<img src="https://dere.shikimori.one/system/animes/original/48414.jpg?1634391534" />
-</div>
-<div class="title-overlay">
-<p>Биско-ржавоед</p>
-</div>
-</div>
-</a>
 
-<!-- Релиз 4 -->
-<a href="releases/doki.html">   
-<div class="card 4">
-<div class="card_image">
-<img src="https://nyaa.shikimori.one/system/animes/original/45425.jpg?1637751311f" />
-</div>
-<div class="title-overlay">
-<p>Медленная петля</p>
-</div>
-</div>
-</a>
 
-<!-- Релиз 5 -->
-<a href="releases/doki.html"> 
-<div class="card 4">
-<div class="card_image">
-<img src="https://kawai.shikimori.one/system/animes/original/44516.jpg?1636460046" />
-</div>
-<div class="title-overlay">
-<p>Убивающая любовь</p>
-</div>
-</div>
-</a>
-</div>
+<!-- РЕЛИЗ -->
+<div class="release">
+    <a href="releases/doki.html">
+    <img src="https://dere.shikimori.one/system/animes/original/48414.jpg?1634391534" alt="Биско-ржавоед"></a>
+    <div class="release-info">
+    <div class="release-title">
+            Биско-ржавоед
+    </div>
+    <div class="release-category">
+            Экшен, Приключения, Фэнтези
+    </div>
+    </div>
+    </div>
+<!-- ----- -->
 
+<!-- РЕЛИЗ -->
+<div class="release">
+    <a href="releases/doki.html">
+    <img src="https://nyaa.shikimori.one/system/animes/original/44055.jpg?1636554619" alt="Сасаки и Мияно"></a>
+    <div class="release-info">
+    <div class="release-title">
+            Сасаки и Мияно
+    </div>
+    <div class="release-category">
+            Сёнен-ай, Повседневность, Школа
+    </div>
+    </div>
+    </div>
+<!-- ----- -->
+
+<!-- РЕЛИЗ -->
+<div class="release">
+    <a href="releases/doki.html">
+    <img src="https://nyaa.shikimori.one/system/animes/original/45425.jpg?1637751311" alt="Медленная петля"></a>
+    <div class="release-info">
+    <div class="release-title">
+            Медленная петля
+    </div>
+    <div class="release-category">
+            Повседневность, Cпорт
+    </div>
+    </div>
+    </div>
+<!-- ----- -->
+
+<!-- РЕЛИЗ -->
+<div class="release">
+    <a href="releases/doki.html">
+    <img src="https://kawai.shikimori.one/system/animes/original/44516.jpg?1636460046" alt="Убивающая любовь"></a>
+    <div class="release-info">
+    <div class="release-title">
+            Убивающая любовь
+    </div>
+    <div class="release-category">
+            Дзёсей, Экшен, Романтика
+    </div>
+    </div>
+    </div>
+<!-- ----- -->
+
+<!-- РЕЛИЗ -->
+<div class="release">
+    <a href="releases/doki.html">
+    <img src="https://nyaa.shikimori.one/system/animes/original/49605.jpg?1638102285" alt="Доки, ты справишься!"></a>
+    <div class="release-info">
+    <div class="release-title">
+            Доки, ты справишься!
+    </div>
+    <div class="release-category">
+            Комедия, Романтика, Этти
+    </div>
+    </div>
+    </div>
+<!-- ----- -->
+
+<!-- РЕЛИЗ -->
+<div class="release">
+    <a href="releases/doki.html">
+    <img src="https://sun9-67.userapi.com/c857216/v857216883/20b42/5NxUllKr-lM.jpg" alt="Отель «Хазбин»"></a>
+    <div class="release-info">
+    <div class="release-title">
+            Отель «Хазбин»
+    </div>
+    <div class="release-category">
+            Комедия, Приключение
+    </div>
+    </div>
+    </div>
+<!-- ----- -->
+
+<!-- РЕЛИЗ -->
+<div class="release">
+    <a href="releases/doki.html">
+    <img src="https://sun9-43.userapi.com/c857124/v857124910/2b350/PMlyxxInMz0.jpg" alt="Dork Souls III"></a>
+    <div class="release-info">
+    <div class="release-title">
+            Dork Souls III
+    </div>
+    <div class="release-category">
+            Комедия, Пародия, Фэнтези
+    </div>
+    </div>
+    </div>
+<!-- ----- -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- выавыпып -->
+</div>
+</div>
 
 <!-- Подвалыч -->
 <div class="footer">
 <a href="https://vk.com/evanime" class="fa fa-vk fa-2x"></a>
 <a href="https://t.me/evanime" class="fa fa-telegram fa-2x"></a>
-<P>Epic Voice Anime | 2021</P>
+<p>Epic Voice Anime | 2021</p>
 </div>
 
-<!-- Славься Тяныч! -->
+<!-- Славься Кысик! -->
 </body>
 </html>
