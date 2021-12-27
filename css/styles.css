@@ -256,16 +256,14 @@ body {
     height: 350px;
     box-shadow: 0px -4px 25px 0px rgba(0, 0, 0, 0.28);
     /*margin: 0px 5px 5px 10px;*/
+    border-radius: 5px 5px 5px 5px;
+
 }
 .anime-poster img {
     width: inherit;
     height: inherit;
+    border-radius: 5px 5px 5px 5px;
 }
-.anime-download {
-    color: #db2e52;
-    text-align: center;
-}
-
 
 .anime-page-right {
     /*background-color: orange;*/
