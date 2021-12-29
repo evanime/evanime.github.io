@@ -32,6 +32,7 @@ body {
     width: 250px;
     height: 350px;
     transition: .5s ease;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -168,47 +169,6 @@ body {
 }
 
 
-/* Podval */
-.footer {
-    background-color: #121212;
-    text-align: center;
-    padding: 15px;
-    color: white;
-}
-.fa {
-    padding: 15px;
-    text-align: center;
-    text-decoration: none;
-    /*width: 100%;*/
-}
-
-.fa:hover {
-    -webkit-filter: saturate(200%);
-    color: white;
-}
-/* VK */
-.fa-vk {
-/*    background: linear-gradient(skyblue, aliceblue);*/
-    color: white;
-}
-
-/* Telegram */
-.fa-telegram {
-    /*background: #db2e52;*/
-    color: white;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 /* Страница аниме: релиз */
 
 
@@ -260,7 +220,6 @@ body {
 }
 
 .anime-page-right {
-    /*background-color: orange;*/
     padding: 0 10px;
 
 }
@@ -293,12 +252,12 @@ body {
 }
 
 .anime-player iframe {
- position: absolute;
- top:0;
- left: 0;
- width: 100%;
- height: 100%;
- padding-bottom: 25px;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 25px;
 }
 
 .anime-timing-and-actor {
@@ -308,6 +267,124 @@ body {
 .anime-timing-and-actor img {
     width: 250px;
 }
+
+
+/* Страница Поддержки*/
+
+.banner-donats-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    height: 600px;
+    padding-top: 120px;
+    background-image: url(../img/anime-girl-donats-page.webp);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.banner-donats-info {
+    width: 400px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 20px;
+    margin-left: 50px;
+}
+.banner-donats-card {
+    text-align: right;
+    margin-left: 15%;
+    ;
+}
+
+@media screen and (max-width: 1400px) {
+    .banner-donats-page {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: 0;
+    justify-content: center;
+    padding: 25px;
+    background-image: url(../img/background-donats-page.webp);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: auto; 100%; 
+}
+    .banner-donats-info {
+    width: 100%;
+    margin-left: 0px;
+}
+    .banner-donats-card {
+    width: 100%;
+    text-align: left;
+    margin-left: 0px;
+}
+}
+.banner-donats-card p {
+    margin: 0;
+    color: white;
+}
+.banner-donats-card a {
+    text-decoration: none;
+}
+
+.banner-donats-card img {
+    width: 250px;
+}
+.banner-donats-card button {
+    background-color: #db2e52;
+    min-width: 200px;
+    padding: 8px 16px;
+    border: 0;
+    border-radius: 0;
+    transition: .2s ease;
+}
+.banner-donats-card button:hover {
+    background-color: #a91c3a;
+}
+
+/* Podval */
+.footer {
+    background-color: #121212;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    bottom: 0;
+
+}
+.fa {
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    /*width: 100%;*/
+}
+
+.fa:hover {
+    -webkit-filter: saturate(200%);
+    color: white;
+}
+/* VK */
+.fa-vk {
+/*    background: linear-gradient(skyblue, aliceblue);*/
+    color: white;
+}
+
+/* Telegram */
+.fa-telegram {
+    /*background: #db2e52;*/
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
