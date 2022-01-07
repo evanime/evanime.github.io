@@ -1,0 +1,14 @@
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(([^/]+/)*[^.]+)$ /$1.php [L]
+RewriteCond %{REQUEST_URI} ^/index$ [OR]
+RewriteCond %{REQUEST_URI} ^/index[.]+(\w+)$
+RewriteRule . / [R=301,L]
+
+Options +FollowSymlinks
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https://(www.)?evanime.online/ [nc]
+RewriteRule .*.(gif|jpg|png)$ https://evanime.online/img/goaway.gif[nc]
+
+LimitRequestBody 10240000
