@@ -353,7 +353,10 @@ html, body {
     padding: 15px;
     color: white;
     bottom: 0;
-
+}
+.footer p {
+    padding: 3px;
+    margin: 0;
 }
 .fa {
     padding: 15px;
@@ -368,48 +371,28 @@ html, body {
 }
 /* VK */
 .fa-vk {
-/*    background: linear-gradient(skyblue, aliceblue);*/
     color: white;
 }
 
 /* Telegram */
 .fa-telegram {
-    /*background: #db2e52;*/
     color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.kit {
-margin: 0 auto;
-max-width: 1280px;
-text-align: center;
-color: white;
-font-size: 25px;
-}
-
-.kit img {
-width: 150px;
+/* E-Mail */
+.fa-envelope {
+    color: white;
 }
 
 .team-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+.team-item {
+    width: 200px;
+    margin: 10px;
+    transition: .5s ease;
 }
 .team-info {
     padding: 0 10px;
@@ -424,11 +407,7 @@ width: 150px;
     padding-top: 50px;
     padding-bottom: 25px;
 }
-.team-item {
-    width: 200px;
-    margin: 10px;
-    transition: .5s ease;
-}
+
 
 .team-item img {
     width: 200px;
@@ -475,23 +454,132 @@ width: 150px;
 
 
 /* Страница участника команды */
-.warrior-page {
-    max-width: 1400px;
+.kisik-page-fon {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    background-image: url(../img/img-team/fon-kisik.webp);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: auto; 
+
+
+}
+.personal-logo {
+    width: 250px;
+    height: 350px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-
+background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: auto;
 }
-.warrior-page-left {
-    width: 500px;
-    flex-direction: column;
+.specialization-fon {
+    width: 95%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    background: url('../img/img-team/RAMKA-1.png') left/auto 100% no-repeat, url('../img/img-team/RAMKA-2.png') right/auto 100% no-repeat
 }
-.warrior-page-left img {
-    float:left;
-
-}
-
-.warrior-page-right {
+.specialization-cur {
     padding: 0 10px;
+    flex-direction: row;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1500px;
+}
+.specialization {
+    height: 70px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    background-image: url(../img/img-team/specialization-logo.webp);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.line {
+    width: 100%;
+    height: 4px;
+    margin: 0 auto;
+    background-image: url(../img/img-team/line-personal-page.webp);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+@media screen and (max-width: 500px) {
+    .line {
+    display: none;
+    }
+    .specialization {
+    height: 20px;
+    margin-top: 0px;
+    padding-top: 50px;
+    margin-bottom: 0px;
+    }
+}
+.participant-info {
+    padding: 0 20px;
+    flex-direction: row;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
 
 }
+
+/* Участник проектов */
+.release-participant-logo {
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 540px;
+    
+}
+.release-participant-logo img {
+    width: 90%;
+    padding: 20px;
+}
+.release-participant-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.release-participant-item {
+    width: 150px;
+    margin: 10px;
+    transition: .5s ease;
+}
+
+.release-participant-item img {
+    width: 150px;
+
+}
+
+.specialization-participant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.specialization-participant-item {
+    width: 300px;
+    padding: 10px;
+}
+.specialization-participant-item img {
+    width: inherit;
+}
+.specialization-participant-title {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+.specialization-participant-description {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
