@@ -469,7 +469,7 @@ html, body {
     background: linear-gradient(to top, rgba(90, 0, 31, 1), rgba(34, 101, 163, 0.3)), url(../img/img-team/fon-tema.gif);
     background-position: center 0;
     background-repeat: no-repeat;
-    background-size: auto; 
+    background-size: cover; 
 }
 .personal-logo {
     width: 250px;
