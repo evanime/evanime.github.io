@@ -174,8 +174,6 @@ html, body {
 
 
 /* Страница аниме: релиз */
-
-
 .anime-shapka {
     margin: 0 auto;
     height: 350px;
@@ -355,6 +353,7 @@ html, body {
     bottom: 0;
 }
 .footer p {
+    font-size: 12px;
     padding: 3px;
     margin: 0;
 }
@@ -384,6 +383,7 @@ html, body {
     color: white;
 }
 
+/* Страница команды */
 .team-list {
     display: flex;
     flex-wrap: wrap;
@@ -395,7 +395,7 @@ html, body {
     transition: .5s ease;
 }
 .team-info {
-    padding: 0 10px;
+    padding: 0 20px;
     flex-direction: row;
     text-align: center;
     color: white;
@@ -407,18 +407,16 @@ html, body {
     padding-top: 50px;
     padding-bottom: 25px;
 }
-
-
+.line-team img {
+    max-width: 90%;
+    margin-left: -12px;
+}
 .team-item img {
     width: 200px;
-
 }
-
 .team-item:hover {
     transform: scale(0.9);
-
 }
-
 .team-page-fon {
     height: 100%;
     width: 100%;
@@ -448,9 +446,8 @@ html, body {
     font-size: 16px;
 }
 .join-team:hover {
-    background-color: #a91c3a;
+    background-color: #0044aa;
 }
-
 
 
 /* Страница участника команды */
@@ -463,8 +460,6 @@ html, body {
     background-position: center 0;
     background-repeat: no-repeat;
     background-size: auto; 
-
-
 }
 .personal-logo {
     width: 250px;
@@ -553,18 +548,15 @@ background-position: center 0;
     margin: 10px;
     transition: .5s ease;
 }
-
 .release-participant-item img {
     width: 150px;
 
 }
-
 .specialization-participant {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .specialization-participant-item {
     width: 300px;
     padding: 10px;
