@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+/* Страница участника команды */
+.kisik-page-fon {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    background-image: url(../img/img-team/fon-team.webp);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.personal-ava {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 20px 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 25px 0px 0px 0px;
+}
+.personal-ava img {
+    height: 400px;
+}
+.personal-faq {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 650px;
+    font-size: 16px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0px 25px 0px 0px;
+    font-family: 'Jost', sans-serif;
+}
+.personal-faq p {
+    margin: 5px;
+}
+.personal-faq h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 50px;
+    font-weight: normal;
+}
+.info-pers {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-contact {
+    padding: 25px 0px;
+}
+.icon-contact a {
+    padding-right: 25px;
+}
+.fa-brands {
+    color: white;
+}
+.spec-bg {
+    display: flex;
+    justify-content: center;
+}
+.specialization {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+    padding: 11px;
+}
+
+.spec-info {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-family: 'Jost', sans-serif;
+}
+.spec-info h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+
+@media screen and (max-width: 950px) {
+.info-pers {
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.personal-faq {
+    width: 100%;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+.personal-ava {
+    background-color: rgba(0, 0, 0, 0.0);
+}
+.info-pers {
+    padding: 20px;
+}
+.spec-bg {
+    flex-wrap: wrap;
+}
+
+}
+@media screen and (max-width: 600px) {
+.specialization {
+    width: 90%;
+}
+}

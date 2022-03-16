@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Yanone+Kaffeesatz&display=swap');
 html, body {
     height: 100%;
 }
@@ -11,15 +14,74 @@ html, body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-color: #121212;
+    background-image: url(../img/Eva-texture-bg.webp);
+    background-size: 40%;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 .main {
     flex: 1 0 auto;
 }
 
+/* Шапка//////////////////////////////////////////// */
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    z-index: 1;
+}
+
+.menu {
+    width: 130px;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.logo-menu {
+    width: 130px;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.logo-menu img {
+    max-height:40px;
+}
+
+@media screen and (max-width: 600px) {
+.header {
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+.logo-menu img {
+    max-height:30px;
+}
+.menu img {
+    height: 30px;
+}
+.menu {
+    width: 120px;
+}
+.logo-menu {
+    width: 100px;
+}
+.release-title {
+    font-size: 15px;
+    }
+}
+
+/*Главная страница*/
 .releases {
     display: flex;
     flex-wrap: wrap;
@@ -47,162 +109,77 @@ html, body {
     width: 150px;
     height: 210px;
 }
+.release-title {
+    font-size: 15px !important;
+}
 }
 
 .release:hover img {
     /*transform: scale(0.99, 0.99);*/
     -webkit-filter: saturate(175%);
 }
-
 .release-info { 
-    text-align: center;
-    /*background-color: #875618;*/
-}
-
-.release-title {
-    font-size: 20px;
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.release-category {
-    font-size: 15px;
-    color: #ffc4d0;
-    font-family: 'Inter', sans-serif;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-
-/* Шапка//////////////////////////////////////////// */
-.header {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    align-content: center;
     align-items: center;
-    flex-direction: row;
-    background-color: #060606;
-}
-
-.header a {
-    color: #fff;
-    text-decoration: none;
-    font-size:15px;
-    width: 150px;
-    height: 70px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    transition: .3s ease;
-}
-.header img {
-    max-height:40px;
-}
-
-.header a:hover {
-    background-color: #db2e52;
-    color: white;
-}
-.logo {
-    background-color: #db2e52;
-    order: 2;
-}
-.team {
-    order: 1;
-}
-.donats {
-    order: 3;
-}
-.burger {
-    order: 4;
-    display: none;
-}
-
-@media screen and (max-width: 600px) {
-.header {
     flex-direction: column;
 }
-
-.nav-bar {
-    display: none;
+.release-title {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 80%;
+    height: 25px;
+    margin: 10px 0px 10px 0px;
+    background-color: #901834;
+    border-radius: 7px 7px 7px 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.active {
-    background-color: #060606;
-}
-.header a:hover {
-    background-color: #060606;
-}
-.logo {
-    display: none;
-    order: 2;
-}
-.burger {
-    display: block;
-    order: 1;
-}
-.team {
-    display: none;
-    order: 3;
-}
-.donats {
-    display: none;
-    order: 4;
-}
-/* Мобильное меню */
-.header.responsive .logo {
-    display: block;
-    order: 2;
-}
-.header.responsive .burger {
-    order: 1;
-}
-.header.responsive .team {
-    display: block;
-    order: 3;
-}
-.header.responsive .donats {
-    display: block;
-    order: 4;
-}
+.release-eng-title {
+    color: #b1b1b1;
+    font-size: 15px;
 }
 
 
 /* Страница аниме: релиз */
+
 .anime-shapka {
-    margin: 0 auto;
+    margin-top: -100px;
     height: 350px;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
 }
 .anime-shapka img {
     width: 100%;
     height: inherit;
     object-fit: cover;
 }
-
 .anime-page {
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
+    font-size: 25px;
 
 }
 .anime-page-left {
     /*background-color: blue;*/
     width: 250px;
-    margin-right: 35px;
+    margin-right: 15px;
 }
 
 @media screen and (max-width: 600px) {
 .anime-page-left {
     display: none;
+}
+.status {
+    flex-direction: column;
 }
 }
 
@@ -210,47 +187,50 @@ html, body {
     margin-top: -150px;
     width: 250px;
     height: 350px;
-    box-shadow: 0px -4px 25px 0px rgba(0, 0, 0, 0.5);
-    /*margin: 0px 5px 5px 10px;*/
-    border-radius: 5px 5px 5px 5px;
-
 }
 .anime-poster img {
     width: inherit;
     height: inherit;
-    border-radius: 5px 5px 5px 5px;
 }
 
 .anime-page-right {
-    padding: 0 10px;
-
+    padding: 0 20px;
+}
+.anime-name {
+    margin-top: -90px;
+    color: white;
+}
+.anime-name p {
+    margin: 0;
+}
+.anime-name h1 {
+    font-size: 60px;
+    margin: 0;
+    font-weight: normal;
 }
 .anime-info {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     color: #b1b1b1;
-    padding: 10px;
+    padding-top: 15px;
 }
-
 .anime-info p {
-    margin-top: -13px;
-
+    color: white;
+    margin: 10px 0px 10px 0px;
 }
-.anime-info h1 {
-    margin-top: -13px;
-    color: #e1e1e1;
-}
-.fcpa {
-    color: orange;
+.status {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
 }
 .anime-player {
-    margin: 0 auto;
+    display: flex;
     max-width: 1920px;
     position: relative;
-    padding-bottom: 50.5%;
-    padding-top: 30px;
+    padding-bottom: 50.5%;   
     height: 0;
+    margin-top: 25px;
     overflow: hidden;
+    border-radius:25px 25px 25px 25px;
 }
 
 .anime-player iframe {
@@ -259,17 +239,33 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    padding-bottom: 25px;
 }
 
 .anime-timing-and-actor {
     text-align: right;
     color: white;
+    padding-right: 20px;
 }
 .anime-timing-and-actor img {
-    width: 250px;
+    width: 200px;
 }
 
+.vkcomments {
+    z-index:99;
+    position:relative;
+    padding-top: 25px;
+}
+.vkcommentstitl {
+    z-index:100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    background-color:#901834;
+    width: 100%;
+    height: 40px;
+    color:#fff;
+}
 
 /* Страница Поддержки*/
 
@@ -344,45 +340,6 @@ html, body {
     background-color: #a91c3a;
 }
 
-/* Podval */
-.footer {
-    background-color: #121212;
-    text-align: center;
-    padding: 15px;
-    color: white;
-    bottom: 0;
-}
-.footer p {
-    font-size: 12px;
-    padding: 3px;
-    margin: 0;
-}
-.fa {
-    padding: 15px;
-    text-align: center;
-    text-decoration: none;
-    /*width: 100%;*/
-}
-
-.fa:hover {
-    -webkit-filter: saturate(200%);
-    color: white;
-}
-/* VK */
-.fa-vk {
-    color: white;
-}
-
-/* Telegram */
-.fa-telegram {
-    color: white;
-}
-
-/* E-Mail */
-.fa-envelope {
-    color: white;
-}
-
 /* Страница команды */
 .team-list {
     display: flex;
@@ -399,17 +356,16 @@ html, body {
     flex-direction: row;
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
 }
 .team-logo {
-    padding: 0 10px;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 25px;
+    padding: 0 20px;
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 320px;
 }
-.line-team img {
-    max-width: 90%;
-    margin-left: -12px;
+.team-logo img {
+    max-width: 100%;
 }
 .team-item img {
     width: 200px;
@@ -429,160 +385,48 @@ html, body {
 }
 
 .join-team {
+    width: 350px;
     background-color: #2e73db;
     margin: 0 auto;
     display: flex;
-    padding: 15px;
+    justify-content: center;
     margin-top: 100px;
     margin-bottom: 100px;
-    border: 0;
-    border-radius: 0;
+    border-radius: 25px;
     transition: .5s ease;
 }
 .join-team a {
     text-decoration: none;
-    color: white;
     text-transform: uppercase;
-    font-size: 16px;
+    color: white;
+    font-size: 25px;
 }
 .join-team:hover {
     background-color: #0044aa;
 }
 
-
-/* Страница участника команды */
-.kisik-page-fon {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    justify-content: center;
-    background-image: linear-gradient(to top, rgba(0, 0, 31, 1), rgba(34, 101, 163, 0.2)), url(../img/img-team/fon-kisik.gif);
-    background-position: center 0;
-    background-repeat: no-repeat;
-    background-size: cover; 
-}
-.tema-page-fon {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    justify-content: center;
-    background: linear-gradient(to top, rgba(90, 0, 31, 1), rgba(34, 101, 163, 0.3)), url(../img/img-team/fon-tema.gif);
-    background-position: center 0;
-    background-repeat: no-repeat;
-    background-size: cover; 
-}
-.personal-logo {
-    width: 250px;
-    height: 350px;
-    margin: 0 auto;
-    background-position: center 0;
-    background-repeat: no-repeat;
-    background-size: auto;
-}
-.specialization-fon {
-    width: 95%;
-    margin: 0 auto;
-    padding-bottom: 50px;
-    background: url('../img/img-team/RAMKA-1.png') left/auto 100% no-repeat, url('../img/img-team/RAMKA-2.png') right/auto 100% no-repeat
-}
-.specialization-cur {
-    padding: 0 10px;
-    flex-direction: row;
+/* Podval */
+.footer {
     text-align: center;
+    padding: 15px;
     color: white;
-    font-size: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1500px;
+    bottom: 0;
 }
-.specialization {
-    height: 70px;
-    margin-top: 50px;
-    margin-bottom: 15px;
-    background-image: url(../img/img-team/specialization-logo.webp);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
+
+.footer p {
+    font-size: 15px;
+    padding: 3px;
+    margin: 0;
 }
-.line {
-    width: 100%;
-    height: 4px;
-    margin: 0 auto;
-    background-image: url(../img/img-team/line-personal-page.webp);
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-}
-@media screen and (max-width: 500px) {
-    .line {
-    display: none;
-    }
-    .specialization {
-    height: 20px;
-    margin-top: 0px;
-    padding-top: 50px;
-    margin-bottom: 0px;
-    }
-}
-.participant-info {
-    padding: 0 20px;
-    flex-direction: row;
+.fa {
+    padding: 15px;
     text-align: center;
+    text-decoration: none;
+}
+.fa-brands {
     color: white;
-    font-size: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 600px;
-
-}
-
-/* Участник проектов */
-.release-participant-logo {
-    padding-top: 20px;
-    margin: 0 auto;
-    max-width: 540px;
-    display: flex;
-    justify-content: center;
-}
-.release-participant-logo img {
-    width: 80%;
-    padding: 20px;
-}
-.release-participant-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom: 50px;
-}
-.release-participant-item {
-    width: 150px;
-    margin: 10px;
-    transition: .5s ease;
-}
-.release-participant-item img {
-    width: 150px;
-
-}
-.specialization-participant {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.specialization-participant-item {
-    width: 300px;
     padding: 10px;
 }
-.specialization-participant-item img {
-    width: inherit;
-}
-.specialization-participant-title {
+/*.fa-telegram {
     color: white;
-    font-size: 30px;
-    text-align: center;
-}
-.specialization-participant-description {
-    color: white;
-    font-size: 16px;
-    text-align: center;
-}
-
+}*/
