@@ -8,7 +8,7 @@ html, body {
     flex-direction: column;
     margin: 0;
     background-image: url(../img/Eva-texture-bg.webp);
-    background-size: 40%;
+    background-size: 30%;
     box-sizing: border-box;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
@@ -79,6 +79,8 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .release {
@@ -192,6 +194,7 @@ html, body {
 .anime-name {
     margin-top: -90px;
     color: white;
+      text-shadow: -2px -2px 0 #141414, 2px -2px 0 #141414, -2px 2px 0 #141414, 2px 2px 0 #141414;
 }
 .anime-name p {
     margin: 0;
