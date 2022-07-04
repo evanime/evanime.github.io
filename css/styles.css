@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Yanone+Kaffeesatz&display=swap');
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),
+        url('Gilroy-Medium.woff2') format('woff2'),
+        url('Gilroy-Medium.woff') format('woff'),
+        url('Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
 html, body {
     height: 100%;
 }
@@ -9,8 +19,24 @@ html, body {
     margin: 0;
     background-image: url(../img/Eva-texture-bg.webp);
     background-size: 30%;
+/*  */
     box-sizing: border-box;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Gilroy Medium', normal;
+    font-weight: 600;
+}
+
+.summer-bg {
+    background-image: url(../img/img-team/summer-bg.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat, repeat-y;
+}
+.summer-bg-2 {
+    background-image: url(../img/img-team/summer-bg-2.webp);
+    background-size: 100%;
+    /*background-attachment: fixed;*/
+    background-repeat: no-repeat, repeat-y;
+    background-position: bottom;
 }
 
 .main {
@@ -104,9 +130,6 @@ html, body {
     width: 150px;
     height: 210px;
 }
-.release-title {
-    font-size: 15px !important;
-}
 }
 
 .release:hover img {
@@ -121,39 +144,34 @@ html, body {
     flex-direction: column;
 }
 .release-title {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    width: 80%;
-    height: 25px;
-    margin: 10px 0px 10px 0px;
-    background-color: #901834;
-    border-radius: 7px 7px 7px 7px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    color: #fff;
+    font-size: 18px;
+    margin: 0px 0px 5px 0px;
+    text-align: center;
 }
 .release-eng-title {
-    color: #b1b1b1;
+    color: #fff;
     font-size: 15px;
+    text-align: center;
+    font-weight: 300;
 }
 
 
 /* Страница аниме: релиз */
 
 .anime-shapka {
-    margin-top: -100px;
+    /*margin-top: -100px;*/
     height: 350px;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;    
+    flex-wrap: wrap; 
+
 }
 .anime-shapka img {
     width: 100%;
     height: inherit;
     object-fit: cover;
+    border-radius: 25px 25px 0px 0px; 
 }
 .anime-page {
     max-width: 1400px;
@@ -164,24 +182,34 @@ html, body {
 
 }
 .anime-page-left {
-    /*background-color: blue;*/
     width: 250px;
+    height: 250px;
     margin-right: 15px;
+ /*   margin-top: 30px;*/
+    position: sticky;
+    top: 0;
+    
 }
 
 @media screen and (max-width: 600px) {
 .anime-page-left {
     display: none;
 }
-.status {
-    flex-direction: column;
+.status-info {
+    font-size: 10px;
+}
+}
+@media screen and (max-width: 772px) {
+.release-title {
+    display: none;
 }
 }
 
 .anime-poster {
-    margin-top: -150px;
+    /*margin-top: -150px;*/
     width: 250px;
     height: 350px;
+
 }
 .anime-poster img {
     width: inherit;
@@ -189,36 +217,59 @@ html, body {
 }
 
 .anime-page-right {
-    padding: 0 20px;
+    /*padding: 0 20px;*/
 }
 .anime-name {
-    margin-top: -90px;
     color: white;
-      text-shadow: -2px -2px 0 #141414, 2px -2px 0 #141414, -2px 2px 0 #141414, 2px 2px 0 #141414;
+    text-align: center;
+    /*margin-top: 15px;*/
+    margin-bottom: 15px;
 }
 .anime-name p {
     margin: 0;
 }
 .anime-name h1 {
-    font-size: 60px;
+    font-size: 30px;
     margin: 0;
-    font-weight: normal;
+    font-weight: 600;
 }
 .anime-info {
-    font-size: 20px;
-    color: #b1b1b1;
-    padding-top: 15px;
+    font-size: 18px;
+    color: #dadada;
+    font-weight: 300;
+    text-align: justify;
+    padding: 25px;
 }
 .anime-info p {
     color: white;
     margin: 10px 0px 10px 0px;
 }
+
+
+
 .status {
     display: flex;
-    justify-content: space-between;
-    width: 80%;
+    flex-direction: row;
+    margin-top: 15px;
+}
+.status-info {
+    padding: 5px;
+    width: 20%;
+    text-align: center;
+    font-weight: 600;
 }
 
+.line-anime  {
+    height: 50px;
+    margin: 10px;
+    background-image: url(../img/img-wp/line.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.line-anime img {
+    
+}
 .anime-player {
     display: flex;
     max-width: 1920px;
@@ -238,9 +289,6 @@ html, body {
     height: 100%;
 }
 
-.anime-player-II {
-
-}
 
 .anime-timing-and-actor {
     text-align: right;
@@ -250,6 +298,17 @@ html, body {
 .anime-timing-and-actor img {
     width: 200px;
 }
+
+
+.tab {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+}
+
+
 
 .vkcomments {
     z-index:99;
@@ -401,6 +460,7 @@ html, body {
     text-transform: uppercase;
     color: white;
     font-size: 25px;
+    text-align: center;
 }
 .join-team:hover {
     background-color: #0044aa;
@@ -410,12 +470,12 @@ html, body {
 .footer {
     text-align: center;
     padding: 15px;
-    color: white;
+    color: #fff;
     bottom: 0;
 }
 
 .footer p {
-    font-size: 15px;
+    font-size: 18px;
     padding: 3px;
     margin: 0;
 }
@@ -423,8 +483,9 @@ html, body {
     padding: 15px;
     text-align: center;
     text-decoration: none;
+
 }
 .fa-brands {
-    color: white;
+    color: #fff;
     padding: 10px;
 }
