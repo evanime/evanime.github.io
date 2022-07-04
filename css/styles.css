@@ -1,13 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Yanone+Kaffeesatz&display=swap');
-@font-face {
-    font-family: 'Gilroy';
-    src: local('Gilroy Medium'), local('Gilroy-Medium'),
-        url('Gilroy-Medium.woff2') format('woff2'),
-        url('Gilroy-Medium.woff') format('woff'),
-        url('Gilroy-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-  }
 
 html, body {
     height: 100%;
@@ -19,7 +10,6 @@ html, body {
     margin: 0;
     background-image: url(../img/Eva-texture-bg.webp);
     background-size: 30%;
-/*  */
     box-sizing: border-box;
     font-family: 'Gilroy Medium', normal;
     font-weight: 600;
