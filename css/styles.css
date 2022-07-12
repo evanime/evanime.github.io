@@ -391,6 +391,8 @@ html, body {
     background-color: #a91c3a;
 }
 
+
+
 /* Страница команды */
 .team-list {
     display: flex;
@@ -456,6 +458,21 @@ html, body {
 .join-team:hover {
     background-color: #0044aa;
 }
+@media screen and (max-width: 600px) {
+.team-info {
+    text-align: left;
+    font-size: 20px;
+}
+.team-item {
+    width: 150px;
+}
+.team-item img {
+    width: 150px;
+}
+
+}
+
+
 
 /* Podval */
 .footer {
