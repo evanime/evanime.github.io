@@ -152,8 +152,7 @@ html, body {
 /* Страница аниме: релиз */
 
 .anime-shapka {
-    /*margin-top: -100px;*/
-    height: 350px;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap; 
